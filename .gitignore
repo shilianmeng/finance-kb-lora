@@ -1,0 +1,23 @@
+# 模型与权重（基座约 3GB，LoRA 适配器另行分发）
+models/
+outputs/
+*.safetensors
+*.bin
+*.pt
+*.gguf
+
+# 训练/评估数据集：由 scripts/build_dataset.py 生成
+data/sft/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 本地配置与密钥
+.env
+.env.*
+*.pem
+*.key
+*.log

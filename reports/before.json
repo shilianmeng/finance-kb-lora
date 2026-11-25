@@ -1,0 +1,1100 @@
+{
+ "summary": {
+  "metric_version": "9-bare-and-chinese-scores",
+  "limitations": "规则检查数字、编号、分值方向及引用范围；不等于完整语义忠实度，需人工复核。",
+  "n": 100,
+  "不编造率": 90.0,
+  "引用正确率": 0.0,
+  "引用召回": 0.0,
+  "正确拒答率": 75.8,
+  "误拒率": 56.7,
+  "by_type": {
+   "faithful": {
+    "n": 34,
+    "不编造率": 94.1
+   },
+   "multi": {
+    "n": 33,
+    "不编造率": 75.8
+   },
+   "refuse": {
+    "n": 33,
+    "不编造率": 100.0
+   }
+  },
+  "backend": "hf",
+  "model": "/root/work/models/Qwen2.5-1.5B-Instruct",
+  "lora": "",
+  "dataset_sha256": "9eeca0651be26ff18049ad52c77b5a694a20eb1e14576b7fc7b2256d9a0c8f60",
+  "seconds": 38.5
+ },
+ "rows": [
+  {
+   "id": "faithful-00001",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00002",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00003",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00004",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00005",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00006",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "total:80"
+   ],
+   "cites": [
+    1,
+    2
+   ],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "当前案件是基于规则 R-003 判定为高风险，该规则要求图谱中2跳内共用设备/IP/手机/地址的其他账号数量≥5个。这意味着如果在一个交易过程中，有超过5个不同的账号使用相同的设备或IP地址进行支付，那么这个交易就可能被认为是团伙关联的高风险行为。\n\n相似的判例包括：\n\n[1]《判例：黄牛同地址多账号抢购》（C-002），6个账号7天内将限购手机寄往同一写字楼地址，其中一台设备1小时内下单7次。命中R-004、R-005，80分被拒绝。审核结论：确认欺诈。处置：拦截订单、封禁设备，地址加入灰名单30天。复盘要点：地址聚集叠加设备高频下单可以确认。\n\n[2]《判例：多次未收到货恶意退款》（C-1018），一个账号30天内7次以未收到货申请退款，单笔最高3317元，物流均显示本人签收，同收货手机号退款率83%。命中R-008、R-011，80分，引擎判定拒绝。审核结论：确认欺诈。处置：拦截订单、账号拉黑。\n\n这些案例都表明，当多个不同账号在同一时间段内使用相同设备或IP地址进行支付操作时，可能会被视为团伙关联的高风险行为。因此，如果当前案件也符合上述条件，那么它很可能也会被判定为高风险并采取相应的处理措施。"
+  },
+  {
+   "id": "faithful-00007",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "规则 R-010 「账号高频下单」的意思是：同一个账号在24小时内下单次数达到或超过10次将被认定为高频下单行为。这个规则用于识别和防范通过多个账户进行批量下单的刷单行为。当用户触发此规则时，系统会为其增加30分，并且需要与其它规则叠加使用。"
+  },
+  {
+   "id": "faithful-00008",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "规则 R-005 的意思是：同一收货地址 7 天内出现 ≥4 个账号。表达式是 address_account_count_7d >= 4。命中此规则会加 35 分。"
+  },
+  {
+   "id": "faithful-00009",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00010",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "特征快照是记录决策当时各特征的取值，例如近1小时同设备下单次数。它在审核和申诉时可以看到当时引擎判断的依据，并且每条命中规则还会列出每个条件的实际值和是否满足。"
+  },
+  {
+   "id": "faithful-00011",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00012",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00013",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "判例 C-1011 命中的规则是：\n- R-008：多次未收到货恶意退款\n\n最终定性为：\n- 确认欺诈\n\n处置方式为：\n- 拦截订单\n- 账号拉黑"
+  },
+  {
+   "id": "faithful-00014",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00015",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00016",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00017",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00018",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "规则 R-006 「新账号大额订单」的意思是：对于首次创建账户的新用户，其首笔交易金额达到或超过 3000 元的订单将被认定为高风险行为，并给予相应的评分和处理措施。\n\n命中此规则会获得 25 分加分。"
+  },
+  {
+   "id": "faithful-00019",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "规则 R-006 「新账号大额订单」的意思是：当新创建的账号首次下单时，如果订单金额达到或超过 3000 元，则该订单会被视为异常，并给予 25 分加分。这个规则适用于在 order_create 操作时触发。"
+  },
+  {
+   "id": "faithful-00020",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00021",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00022",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00023",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00024",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "规则 R-006 「新账号大额订单」的意思是：对于首次创建订单的新账号，其首笔订单金额必须大于等于3000元才能被认定为符合此规则。该规则的表达式为：is_new_account == true AND amount >= 3000。当满足这个条件时，会获得25分加分。"
+  },
+  {
+   "id": "faithful-00025",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00026",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00027",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00028",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "total:120",
+    "total:90"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "当前案件被判定为高风险的原因是：\n\n1. **同地址多账号下单**：根据规则 R-005「同地址多账号下单」，黄牛在同一收货地址 7 天内出现≥4个账号被视为高风险行为。这表明存在多个账户同时使用同一个收货地址进行下单的行为，增加了交易的风险。\n\n2. **评分和处罚措施**：当命中此规则时，会获得额外加分，并且需要与其他规则叠加。此外，该规则还规定了具体的处罚措施，如拦截订单、设备封禁、账号拉黑等，进一步提高了风险等级。\n\n至于是否有相似判例，根据提供的资料，确实有类似的情况发生过：\n\n1. **判例：新账号设备农场领券**：\n   - 描述了一个7个注册不满7天的账号在4小时内用2台设备轮流领取同一张优惠券，共用1个收货手机号。\n   - 命中规则R-001、R-002、R-003，最终得到100分（合计120分，截断为100分）。\n   - 审核结论：确认欺诈。\n   - 处置：拦截订单、设备封禁、账号拉黑。\n\n2. **判例：多次未收到货恶意退款**：\n   - 描述了一个账号在30天内3次以未收到货申请退款，单笔最高1665元，物流均显示本人签收，同收货手机号退款率73%。\n   - 命中规则R-008、R-009，最终得到90分。\n   - 审核结论：确认欺诈。\n   - 处置：拦截订单、账号拉黑。\n\n这些案例都展示了在不同情况下，同地址多账号下单的行为会被认定为高风险并受到相应的惩罚措施。"
+  },
+  {
+   "id": "faithful-00029",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00030",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "规则 R-006 的意思是：当新账号首次下单金额达到或超过 3000 元时，会触发此规则。命中该规则后，会额外获得 25 分。"
+  },
+  {
+   "id": "faithful-00031",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00032",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "规则 R-003 「团伙关联账号多」的意思是：图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个。表达式：related_account_count >= 5。命中加 30 分，需与其他规则叠加。适用事件：全部事件。"
+  },
+  {
+   "id": "faithful-00033",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "faithful-00034",
+   "type": "faithful",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00501",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00502",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00503",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00504",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "不能直接定性为刷单。根据资料中的判例，即使设备和收货信息都不重合，但如果同一 IP 在 24 小时内有超过 5 个账号进行支付，仍可能被认定为刷单行为。因此，需要结合其他规则和其他证据来综合判断。"
+  },
+  {
+   "id": "multi-00505",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "不能直接定性为刷单。根据规则 R-007「同 IP 多账号支付」，只有当同一 IP 在 24 小时内有≥5个账号进行支付时才会被判定为刷单。在本案例中，虽然命中了该规则，但由于设备和收货信息不重合，这并不能证明存在团伙行为或大规模的刷单活动。因此，需要进一步调查其他可能的线索来判断是否真的存在刷单行为。"
+  },
+  {
+   "id": "multi-00506",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00507",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00508",
+   "type": "multi",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "4"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据判例C-1070和相关政策，这笔下单事件可以按照以下步骤进行处置：\n\n1. **识别和评估**：\n   - 检查订单金额是否达到高风险阈值，如超过一定数额。\n   - 确认订单是否符合正常的购物行为，例如是否有延迟发货、重复购买等异常情况。\n\n2. **判断结果**：\n   - 如果订单金额合理且未发现异常，可以认为是正常用户。\n   - 如果订单金额不合理或者存在异常行为，需要进一步调查。\n\n3. **处置动作**：\n   - **拦截订单（block_order）**：如果订单金额明显过高，且没有合理的解释，可以直接拦截订单以防止潜在的风险。\n   - **取消本笔订单或优惠**：如果订单金额合理但存在一些小的异常，可以选择取消订单或提供一定的优惠来降低风险。\n   - **账号拉黑（blacklist_user）**：如果订单金额非常高且存在大量异常行为，可以考虑将买家的账户加入黑名单，禁止其再次下单。\n   - **设备封禁（ban_device）**：如果怀疑是利用设备进行批量下单，可以封禁该设备的所有账号，防止未来再发生类似行为。\n   - **放行（release）**：如果经过详细调查后确认订单是正常交易，并且没有证据表明存在欺诈行为，可以放行订单。\n\n4. **记录和报告**：\n   - 在执行任何处置动作之前，应详细记录整个过程，包括判断依据、采取的措施以及最终决定的理由。\n   - 向相关部门汇报处理结果，以便后续参考和改进风控策略。\n\n根据判例C-1070，如果订单金额合理且没有异常行为，可以放行。因此，对于这种情况，最合适的处置方式是放行。"
+  },
+  {
+   "id": "multi-00509",
+   "type": "multi",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "total:30",
+    "total:50"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "某事件同时命中 R-002 和 R-003 规则，总分为：\n\nR-002：50 分\nR-003：30 分\n\n总分 = 50 + 30 = 80 分\n\n根据《风险决策分级与仲裁标准》，总分在 80-100 之间的判定为拒绝（REJECT），直接拦截并生成案件留痕。因此，该事件会被判定为拒绝，并且会直接拦截。"
+  },
+  {
+   "id": "multi-00510",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据判例C-1118和相关政策，这台平板在24小时内登录了5个账号，且这些账号注册时间跨越7年，均为本人正常消费。因此，可以判断这是一个正常的用户行为，而不是团伙欺诈。所以，应该按照政策规定进行处理：\n\n处置：放行。"
+  },
+  {
+   "id": "multi-00511",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据判例C-1183中的情况，可以采取以下处置措施：\n\n1. 拦截订单（block_order）：因为这是确认的欺诈行为，需要阻止交易继续进行。\n2. 设备封禁（ban_device）：由于多个设备同时领取优惠券，这表明存在设备农场的行为，因此需要将这些设备上的所有账号都标记为黑名单，防止其再次发起类似行为。\n3. 账号拉黑（blacklist_user）：对于被发现的羊毛党账户，应将其加入黑名单，以防止其未来再利用这些信息进行欺诈活动。\n\n综上所述，根据判例和相关政策，应该采取拦截订单、设备封禁和账号拉黑的措施来应对这种情况。"
+  },
+  {
+   "id": "multi-00512",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00513",
+   "type": "multi",
+   "refused": true,
+   "fabricated": true,
+   "unsupported": [
+    "90",
+    "total:20",
+    "total:30",
+    "total:40",
+    "total:60",
+    "total:90"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "该事件同时命中规则 R-012 和 R-003，总分为：\n\nR-012：40分 + 20分 = 60分\nR-003：30分\n\n总分：60分 + 30分 = 90分\n\n根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00514",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00515",
+   "type": "multi",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "1"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "不能直接定性为刷单。根据资料中的规则和案例，虽然同 IP 多账号支付符合 R-007 规则，但需要结合其他规则和证据来综合判断。具体来说：\n\n1. **规则 R-007**：该规则规定“同一 IP 24 小时内 ≥5 个账号”视为刷单行为，并且会额外加 30 分。因此，如果多个账号在同一天内使用同一个 IP 进行支付，确实可能被认定为刷单。\n\n2. **规则 P-009**：该规则指出，单凭 IP 关联不能确认为团伙欺诈，因为公共 IP 可能造成大量无关联系。所以，仅仅基于 IP 关联并不能单独作为证据。\n\n3. **案例 C-1096**：这个案例说明即使设备和收货信息都不同，但如果订单金额较小且属于正常小额消费，也可能不会被判定为刷单。这表明，除了 IP 关联外，还需要考虑其他因素，比如订单金额、交易频率等。\n\n综上所述，虽然同 IP 多账号支付符合 R-007 规则，但由于设备和收货信息不重合，单纯依靠这一条规则还不能直接定性为刷单。需要进一步分析订单金额、交易频率、设备信息等其他相关因素，才能做出最终判断。"
+  },
+  {
+   "id": "multi-00516",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据判例C-1187和相关政策，对于类似情况，可以采取以下处置措施：\n\n1. **分析背景信息**：\n   - 确认这些账号是否在同一校园网出口IP下，以及是否有其他共同的设备或收货地址信息。\n\n2. **评估风险因素**：\n   - 如果发现多个账号同时出现在同一IP下，并且存在频繁的交易行为，这可能表明存在团伙欺诈的风险。\n\n3. **参考判例C-1023**：\n   - 判例C-1023提到，5个账号在7天内将限购商品寄往同一收货地址，其中一台设备1小时内下单9次。这个案例显示了高频率的重复交易和集中发货的行为，符合团伙欺诈的特点。\n\n4. **综合判断**：\n   - 结合判例C-1187中的“公共网络IP关联误判”案例，虽然涉及的是校园网IP，但其结果是放行，这提示我们需要谨慎对待此类IP关联。\n\n5. **决定处置方式**：\n   - 基于以上分析，如果确认这些账号确实存在团伙欺诈行为，应该采取如下步骤：\n     - **拦截订单**：因为这是团伙欺诈的典型特征之一，需要阻止整个团伙的交易活动。\n     - **账号拉黑**：对所有相关账号进行拉黑处理，防止未来再次发生类似的欺诈行为。\n     - **设备封禁**：封禁所有相关设备，确保不再有任何可疑交易。\n\n因此，在这种情况下，最合适的处置方式是**拦截订单**和**账号拉黑**，并考虑**设备封禁**作为额外的预防措施。"
+  },
+  {
+   "id": "multi-00517",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00518",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "不能直接定性为刷单。根据资料中的规则和案例，虽然同 IP 多账号支付符合 R-007 规则，但需要其他规则或证据来进一步确认是否为刷单行为。例如，如果设备和收货信息都不同，那么可能只是正常的多人同时购买行为，并非刷单。因此，需要综合分析所有相关因素才能做出准确判断。"
+  },
+  {
+   "id": "multi-00519",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "不能直接定性为刷单。根据资料，R-007 规则要求同一 IP 在 24 小时内有≥5 个账号进行支付才能被认定为刷单。而题目中的情况是 18 个账号在 24 小时内进行了支付，这超过了 R-007 的条件，因此有可能是正常的用户行为。但是，由于设备和收货信息不重合，可以作为判断的一部分考虑，但不能单独作为判断依据。需要结合其他规则和证据来综合判断。"
+  },
+  {
+   "id": "multi-00520",
+   "type": "multi",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "total:0",
+    "total:60"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "该事件同时命中了规则 R-005 和 R-004：\n\n1. **R-005**：\n   - 表达式：address_account_count_7d >= 4\n   - 需要满足条件：同一收货地址 7 天内出现 ≥4 个账号\n\n2. **R-004**：\n   - 表达式：device_order_count_1h > 5\n   - 需要满足条件：同一设备 1 小时内下单超过 5 次\n\n假设这两个规则都满足其条件，则总分计算如下：\n\n- 对于 R-005：需要 4 个账号在同一收货地址 7 天内出现。\n- 对于 R-004：需要 5 个设备在同一设备上 1 小时内下单。\n\n由于两个规则都是针对同一个事件进行评分，所以它们的分数相加得到总分。\n\n根据规则 P-001 的风险决策分级与仲裁标准，总分截断在 0-100 之间：\n\n- 如果总分为 0-59 分，判定为通过（PASS）\n- 如果总分为 60-79 分，判定为人工审核（REVIEW）\n- 如果总分为 80-100 分，判定为拒绝（REJECT）\n\n因此，如果该事件同时满足 R-005 和 R-004 的条件，并且总分在 60-79 分之间，那么它会被判定为人工审核（REVIEW）。"
+  },
+  {
+   "id": "multi-00521",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "该事件同时命中了以下三个规则：\n1. 规则 R-001 「新账号高频领券」：羊毛党：注册不满 7 天，1 小时内领券 ≥3 次。命中加 40 分。\n2. 规则 R-002 「同设备多账号领券」：羊毛党：一台设备 24 小时内被 ≥3 个账号用来领券。命中加 50 分。\n3. 规则 R-003 「团伙关联账号多」：图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个。命中加 30 分。\n\n总分 = 40 + 50 + 30 = 120 分。\n\n根据《风险决策分级与仲裁标准》（P-001），风控引擎对每笔事件命中的规则分值求和，总分截断在 0-100 之间。因此，该事件的总分是 120 分，属于拒绝（REJECT）级别，直接拦截并生成案件留痕。"
+  },
+  {
+   "id": "multi-00522",
+   "type": "multi",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "4"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据判例C-1052中的信息，一笔支付事件的情况如下：\n- 17个账号在5小时内经同一IP支付同一店铺商品；\n- 检查到设备指纹高度重合。\n\n根据判例C-1052的处理结果，审核结论为“确认欺诈”，处置措施包括：\n- 拦截订单；\n- 账号拉黑。\n\n因此，对于类似情况，可以按照以下步骤进行处置：\n\n1. **识别并记录**：首先需要识别出涉及的多个账号及其支付行为，并记录相关数据。\n2. **分析设备指纹**：检查这些账号使用的设备指纹是否高度一致，这有助于判断是否存在团伙欺诈的可能性。\n3. **评估风险**：综合考虑支付金额、交易频率等指标，以及设备指纹的一致性，评估整体欺诈风险。\n4. **决定处置措施**：\n   - 如果确认存在团伙欺诈，应采取拦截订单和账号拉黑的措施。\n   - 如果确认为正常用户，应放行处理。\n\n最终的处置建议是：\n- 对于疑似团伙欺诈的行为，应采取拦截订单和账号拉黑的措施。\n- 对于非团伙欺诈且符合正常用户的条件，应放行处理。"
+  },
+  {
+   "id": "multi-00523",
+   "type": "multi",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "1",
+    "6"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据判例 C-1188 的情况，可以参考以下步骤进行处置：\n\n1. **核查共用设备**：\n   - 确认该设备是否与其他账户共享，包括但不限于家庭成员共用设备。\n   \n2. **核查账号注册时间**：\n   - 检查这些账号的注册时间是否跨越了较长时间段，例如超过8年或7年。\n\n3. **核查日常消费情况**：\n   - 查看这些账号在24小时内是否有异常频繁的交易行为，比如短时间内多次登录等。\n\n4. **综合判断**：\n   - 如果发现上述条件满足，且日常消费情况正常，则可以认定为正常用户，并按照政策规定进行处理。\n\n5. **处置建议**：\n   - 可以选择“放行”选项，因为根据判例 C-1188 的描述，这种情况属于正常用户，不需要采取进一步的措施。\n\n6. **记录和报告**：\n   - 记录相关情况，以便日后参考和分析。\n\n因此，在这种情况下，可以考虑选择“放行”选项，同时做好记录和报告工作。"
+  },
+  {
+   "id": "multi-00524",
+   "type": "multi",
+   "refused": false,
+   "fabricated": true,
+   "unsupported": [
+    "total:30",
+    "total:40"
+   ],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "某事件同时命中 R-012 和 R-003 规则，总分为：\n\nR-012 规则：40 分\nR-003 规则：30 分\n\n总分 = 40 + 30 = 70 分\n\n根据《风险决策分级与仲裁标准》（P-001），总分在 60-79 分之间，判定为人工审核（REVIEW），订单挂起并自动生成待审案件。"
+  },
+  {
+   "id": "multi-00525",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00526",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00527",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00528",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "该事件同时命中了两个规则：\n\n1. **规则 R-005 「同地址多账号下单」**：\n   - 表达式：`address_account_count_7d >= 4`\n   - 命中加 35 分\n\n2. **规则 R-003 「团伙关联账号多」**：\n   - 表达式：`related_account_count >= 5`\n   - 命中加 30 分\n\n因此，总分是 `35 + 30 = 65` 分。\n\n根据《风险决策分级与仲裁标准》，总分在 0-59 分时判定为通过（PASS），业务正常放行；60-79 分时判定为人工审核（REVIEW），订单挂起并自动生成待审案件；80-100 分时判定为拒绝（REJECT），直接拦截并生成案件留痕。\n\n所以，该事件会被判定为拒绝（REJECT），直接拦截并生成案件留痕。"
+  },
+  {
+   "id": "multi-00529",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00530",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "不能直接定性为刷单。根据资料中的信息，即使设备和收货信息都不重合，但如果同一 IP 在 24 小时内有超过 5 个账号进行支付，仍然会触发 R-007 规则，并且会被加 30 分。但是，需要结合其他规则和其他证据来综合判断是否属于团伙欺诈行为。在实际操作中，还需要进一步调查设备和收货信息是否存在共用情况，以及是否有其他异常交易记录等。因此，不能简单地因为设备和收货信息不重合就直接认定为刷单。"
+  },
+  {
+   "id": "multi-00531",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "multi-00532",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "不能直接定性为刷单。根据资料，R-007规则要求同一 IP 在24小时内至少有5个账号进行支付。虽然设备和收货信息不重合，但只要满足这个条件，就可以判定为刷单。因此，这批账号符合R-007规则，可以认定为刷单行为。"
+  },
+  {
+   "id": "multi-00533",
+   "type": "multi",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "cite_ok": false,
+   "cite_recall": 0.0,
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00801",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00802",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "R-001 的阈值是 user_coupon_count_1h >= 3。达到这个阈值就会命中该规则。"
+  },
+  {
+   "id": "refuse-00803",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "R-012的阈值是同一设备在24小时内登录≥5个账号。达到这个阈值就会命中该规则。"
+  },
+  {
+   "id": "refuse-00804",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00805",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00806",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "R-012 的阈值是同一设备 24 小时内登录 ≥5 个账号（养号/批量登录）。达到这个阈值就会命中该规则。"
+  },
+  {
+   "id": "refuse-00807",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "R-007的阈值是同一IP在24小时内≥5个账号。达到这个阈值就会命中。"
+  },
+  {
+   "id": "refuse-00808",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00809",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00810",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00811",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00812",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00813",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00814",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00815",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00816",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00817",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00818",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00819",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00820",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00821",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "规则 R-003 「团伙关联账号多」是由策略师负责维护的。"
+  },
+  {
+   "id": "refuse-00822",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00823",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00824",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00825",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00826",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据提供的资料，规则 R-013 并没有明确的触发条件。资料中提到的规则包括：\n\n- R-002：设备重复使用\n- R-003：多账户同时下单\n- R-006：首次交易\n- R-008：多次未收到货恶意退款\n\n这些规则都是基于不同的行为和情况来判断是否需要进行人工审核或采取其他措施。而 R-013 在提供的资料中并未提及，因此无法根据现有资料确定其具体触发条件。"
+  },
+  {
+   "id": "refuse-00827",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "R-008 的阈值是 3 次。达到这个数量就会命中。"
+  },
+  {
+   "id": "refuse-00828",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据提供的资料，无法确定商户的结算周期是几天。"
+  },
+  {
+   "id": "refuse-00829",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00830",
+   "type": "refuse",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "R-007的阈值是同一IP在24小时内≥8个账号。达到这个阈值就会命中。"
+  },
+  {
+   "id": "refuse-00831",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00832",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  },
+  {
+   "id": "refuse-00833",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。"
+  }
+ ]
+}

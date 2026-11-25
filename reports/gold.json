@@ -1,0 +1,1331 @@
+{
+ "summary": {
+  "metric_version": "2-score-claims",
+  "limitations": "规则检查数字、编号、分值方向及引用范围；不等于完整语义忠实度，需人工复核。",
+  "n": 100,
+  "不编造率": 100.0,
+  "引用正确率": 100.0,
+  "引用召回": 100.0,
+  "正确拒答率": 100.0,
+  "误拒率": 0.0,
+  "by_type": {
+   "faithful": {
+    "n": 34,
+    "不编造率": 100.0
+   },
+   "multi": {
+    "n": 33,
+    "不编造率": 100.0
+   },
+   "refuse": {
+    "n": 33,
+    "不编造率": 100.0
+   }
+  },
+  "backend": "gold",
+  "model": "",
+  "lora": "",
+  "dataset_sha256": "710711787a7cbe57fe52e1f810ccd387f78f97ece36fd3c0b888433af7396809",
+  "seconds": 0.0
+ },
+ "rows": [
+  {
+   "id": "faithful-00001",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-005「同地址多账号下单」黄牛：同一收货地址 7 天内出现 ≥4 个账号，命中加 35 分[2]。相似判例 C-1198：5 个账号 7 天内把限购商品寄往同一收货地址，其中一台设备 1 小时内下单 9 次，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[1]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00002",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "判例 C-1206 命中 R-007、R-003，60 分，引擎判定人工审核；审核结论为确认欺诈，处置为拦截订单、账号拉黑[2]。"
+  },
+  {
+   "id": "faithful-00003",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "判例 C-1035 命中 R-006，25 分，引擎判定通过；审核结论为正常用户，处置为放行[2]。"
+  },
+  {
+   "id": "faithful-00004",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-008「恶意退款：多次未收到货」多次未收到货」：30 天内同账号发起「未收到货」退款 ≥3 次，判定为恶意退款风险，命中加 60 分[4]。相似判例 C-1221：一个账号 30 天内 7 次以未收到货申请退款，单笔最高 2996 元，物流均显示本人签收，同收货手机号退款率 79%，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[3]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00005",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "判例 C-1129 命中 R-007、R-003，60 分，引擎判定人工审核；审核结论为确认欺诈，处置为拦截订单、账号拉黑[4]。"
+  },
+  {
+   "id": "faithful-00006",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    4,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-003「团伙关联账号多」图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个，命中加 30 分[4]。相似判例 C-1171：24 个账号在 5 小时内经同一 IP 支付同一店铺商品，金额集中在 272-318 元，核查发现设备指纹高度重合，引擎判定人工审核，审核结论为确认欺诈，处置为拦截订单、账号拉黑[5]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00007",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "规则 R-010「账号高频下单」刷单：同账号 24 小时下单 ≥10 次，命中加 30 分，适用事件为 order_create[1]。"
+  },
+  {
+   "id": "faithful-00008",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "规则 R-005「同地址多账号下单」黄牛：同一收货地址 7 天内出现 ≥4 个账号，命中加 35 分，适用事件为 order_create、order_pay[2]。"
+  },
+  {
+   "id": "faithful-00009",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-003「团伙关联账号多」图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个，命中加 30 分[3]。相似判例 C-1117：某高校同一校园网出口 IP 24 小时内出现 33 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，引擎判定人工审核，审核结论为正常用户，处置为放行[1]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00010",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "根据《FAQ：决策回溯里的特征快照是什么》：特征快照记录的是决策当时各特征的取值，例如近 1 小时同设备下单次数。之后窗口特征会继续变化，但快照不变，所以审核和申诉时看到的就是当时引擎判断的依据[1]。"
+  },
+  {
+   "id": "faithful-00011",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    3,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-005「同地址多账号下单」黄牛：同一收货地址 7 天内出现 ≥4 个账号，命中加 35 分[3]。相似判例 C-1149：5 个账号 7 天内把限购商品寄往同一收货地址，其中一台设备 1 小时内下单 9 次，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[5]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00012",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "判例 C-1154 命中 R-006，25 分，引擎判定通过；审核结论为正常用户，处置为放行[1]。"
+  },
+  {
+   "id": "faithful-00013",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "判例 C-1011 命中 R-008，60 分，引擎判定人工审核；审核结论为确认欺诈，处置为拦截订单、账号拉黑[2]。"
+  },
+  {
+   "id": "faithful-00014",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-004「同设备高频下单」黄牛：同一设备 1 小时内下单超过 5 次，命中加 45 分[3]。相似判例 C-1037：6 个账号 7 天内把限购商品寄往同一收货地址，其中一台设备 1 小时内下单 7 次，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[1]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00015",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-009「收货手机号退款率高」同收货手机号 24 小时退款率 ≥60%，命中加 30 分[4]。相似判例 C-1067：一个账号 30 天内 3 次以未收到货申请退款，单笔最高 1210 元，物流均显示本人签收，同收货手机号退款率 67%，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[2]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00016",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-003「团伙关联账号多」图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个，命中加 30 分[2]。相似判例 C-1156：8 个账号 7 天内把限购商品寄往同一收货地址，其中一台设备 1 小时内下单 7 次，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[4]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00017",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    3,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-008「恶意退款：多次未收到货」多次未收到货」：30 天内同账号发起「未收到货」退款 ≥3 次，判定为恶意退款风险，命中加 60 分[3]。相似判例 C-1018：一个账号 30 天内 7 次以未收到货申请退款，单笔最高 3317 元，物流均显示本人签收，同收货手机号退款率 83%，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[5]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00018",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "规则 R-006「新账号大额订单」新账号首单金额 ≥3000 元，命中加 25 分，适用事件为 order_create[1]。"
+  },
+  {
+   "id": "faithful-00019",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "规则 R-006「新账号大额订单」新账号首单金额 ≥3000 元，命中加 25 分，适用事件为 order_create[1]。"
+  },
+  {
+   "id": "faithful-00020",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "判例 C-1203 命中 R-006，25 分，引擎判定通过；审核结论为正常用户，处置为放行[1]。"
+  },
+  {
+   "id": "faithful-00021",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-009「收货手机号退款率高」同收货手机号 24 小时退款率 ≥60%，命中加 30 分[2]。相似判例 C-1123：一个账号 30 天内 3 次以未收到货申请退款，单笔最高 1665 元，物流均显示本人签收，同收货手机号退款率 73%，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[1]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00022",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "判例 C-1198 命中 R-004、R-005，80 分，引擎判定拒绝；审核结论为确认欺诈，处置为拦截订单、账号拉黑[1]。"
+  },
+  {
+   "id": "faithful-00023",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-003「团伙关联账号多」图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个，命中加 30 分[3]。相似判例 C-1215：某高校同一校园网出口 IP 24 小时内出现 18 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，引擎判定人工审核，审核结论为正常用户，处置为放行[1]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00024",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "规则 R-006「新账号大额订单」新账号首单金额 ≥3000 元，命中加 25 分，适用事件为 order_create[1]。"
+  },
+  {
+   "id": "faithful-00025",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-009「收货手机号退款率高」同收货手机号 24 小时退款率 ≥60%，命中加 30 分[3]。相似判例 C-1207：一个账号 30 天内 4 次以未收到货申请退款，单笔最高 2686 元，物流均显示本人签收，同收货手机号退款率 78%，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[1]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00026",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-008「恶意退款：多次未收到货」多次未收到货」：30 天内同账号发起「未收到货」退款 ≥3 次，判定为恶意退款风险，命中加 60 分[3]。相似判例 C-1018：一个账号 30 天内 7 次以未收到货申请退款，单笔最高 3317 元，物流均显示本人签收，同收货手机号退款率 83%，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[2]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00027",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-008「恶意退款：多次未收到货」多次未收到货」：30 天内同账号发起「未收到货」退款 ≥3 次，判定为恶意退款风险，命中加 60 分[2]。相似判例 C-1074：一个账号 30 天内 3 次以未收到货申请退款，单笔最高 2192 元，物流均显示本人签收，同收货手机号退款率 92%，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[1]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00028",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-005「同地址多账号下单」黄牛：同一收货地址 7 天内出现 ≥4 个账号，命中加 35 分[1]。相似判例 C-1051：5 个账号 7 天内把限购商品寄往同一收货地址，其中一台设备 1 小时内下单 9 次，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[5]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00029",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-003「团伙关联账号多」图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个，命中加 30 分[1]。相似判例 C-1166：某高校同一校园网出口 IP 24 小时内出现 23 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，引擎判定人工审核，审核结论为正常用户，处置为放行[4]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00030",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "规则 R-006「新账号大额订单」新账号首单金额 ≥3000 元，命中加 25 分，适用事件为 order_create[2]。"
+  },
+  {
+   "id": "faithful-00031",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-007「同 IP 多账号支付」刷单：同一 IP 24 小时内 ≥5 个账号，命中加 30 分[1]。相似判例 C-1159：某高校同一校园网出口 IP 24 小时内出现 18 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，引擎判定人工审核，审核结论为正常用户，处置为放行[4]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00032",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "规则 R-003「团伙关联账号多」图谱：2 跳内共用设备/IP/手机/地址的其他账号 ≥5 个，命中加 30 分，适用事件为 全部事件[1]。"
+  },
+  {
+   "id": "faithful-00033",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-007「同 IP 多账号支付」刷单：同一 IP 24 小时内 ≥5 个账号，命中加 30 分[2]。相似判例 C-1199：19 个账号在 1 小时内经同一 IP 支付同一店铺商品，金额集中在 215-269 元，核查发现设备指纹高度重合，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、账号拉黑[3]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "faithful-00034",
+   "type": "faithful",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "该事件命中规则 R-002「同设备多账号领券」羊毛党：一台设备 24 小时内被 ≥3 个账号用来领券，命中加 50 分[2]。相似判例 C-1120：6 个注册不满 7 天的账号在 1 小时内用 2 台设备轮流领取同一张优惠券，共用 2 个收货手机号，引擎判定拒绝，审核结论为确认欺诈，处置为拦截订单、设备封禁、账号拉黑[4]。可参照该判例核查后处置。"
+  },
+  {
+   "id": "multi-00501",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流无签收凭证的，正常退款[3]。另外，30 天内第 3 次以未收到货申请，达到 R-008 的 ≥3 次阈值，命中加 60 分[1]；政策要求多次以未收到货为由申请退款的转人工审核，审核期间暂停自动退款[3]。"
+  },
+  {
+   "id": "multi-00502",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-005 命中加 35 分[3]；R-003 命中加 30 分[4]。合计 65 分[1]。按分级标准，60-79 分判定为人工审核（REVIEW）[1]。"
+  },
+  {
+   "id": "multi-00503",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-003 命中加 30 分[4]；R-007 命中加 30 分[1]；灰名单命中额外加 20 分[3]。合计 80 分[3]。按分级标准，80-100 分判定为拒绝（REJECT）[3]。"
+  },
+  {
+   "id": "multi-00504",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[1]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[3]。相似判例 C-1166：某高校同一校园网出口 IP 24 小时内出现 23 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[2]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00505",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[3]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[1]。相似判例 C-1236：某高校同一校园网出口 IP 24 小时内出现 22 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[2]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00506",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-007 命中加 30 分[3]；R-003 命中加 30 分[4]；灰名单命中额外加 20 分[1]。合计 80 分[1]。按分级标准，80-100 分判定为拒绝（REJECT）[1]。"
+  },
+  {
+   "id": "multi-00507",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流无签收凭证的，正常退款[1]。30 天内第 2 次申请，未达到 R-008 要求的 ≥3 次，不触发该规则[2]。"
+  },
+  {
+   "id": "multi-00508",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "相似判例 C-1070 的审核结论为正常用户，处置为放行[3]。相关政策《风险决策分级与仲裁标准》规定：风控引擎对每笔事件命中的规则分值求和，总分截断在 0-100 之间[1]。处置动作的含义见《处置动作说明》：可选处置动作有四种：拦截订单（block_order），取消本笔订单或优惠；账号拉黑（blacklist_user），账号写入黑名单，后续事件直接拒绝；设备封禁（ban_device），设备指纹写入黑名单，该设备上所有账号的后续事件直接拒绝；放行（release），确认为正常用户，解除挂起[2]。建议核实与判例情况一致后，参照判例处置。"
+  },
+  {
+   "id": "multi-00509",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-002 命中加 50 分[3]；R-003 命中加 30 分[2]。合计 80 分[4]。按分级标准，80-100 分判定为拒绝（REJECT）[4]。"
+  },
+  {
+   "id": "multi-00510",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "相似判例 C-1118 的审核结论为正常用户，处置为放行[2]。相关政策《图谱关联证据的使用原则》规定：关联图谱以账号、设备、IP、手机号、收货地址为节点，共用关系为边[3]。处置动作的含义见《处置动作说明》：可选处置动作有四种：拦截订单（block_order），取消本笔订单或优惠；账号拉黑（blacklist_user），账号写入黑名单，后续事件直接拒绝；设备封禁（ban_device），设备指纹写入黑名单，该设备上所有账号的后续事件直接拒绝；放行（release），确认为正常用户，解除挂起[1]。建议核实与判例情况一致后，参照判例处置。"
+  },
+  {
+   "id": "multi-00511",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "相似判例 C-1183 的审核结论为确认欺诈，处置为拦截订单、设备封禁、账号拉黑[3]。相关政策《优惠券反薅羊毛政策》规定：每个自然人每个活动限领一张优惠券[2]。处置动作的含义见《处置动作说明》：可选处置动作有四种：拦截订单（block_order），取消本笔订单或优惠；账号拉黑（blacklist_user），账号写入黑名单，后续事件直接拒绝；设备封禁（ban_device），设备指纹写入黑名单，该设备上所有账号的后续事件直接拒绝；放行（release），确认为正常用户，解除挂起[1]。建议核实与判例情况一致后，参照判例处置。"
+  },
+  {
+   "id": "multi-00512",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流显示已签收且有签收凭证的，不予退款并引导用户联系快递[3]。另外，30 天内第 4 次以未收到货申请，达到 R-008 的 ≥3 次阈值，命中加 60 分[1]；政策要求多次以未收到货为由申请退款的转人工审核，审核期间暂停自动退款[3]。"
+  },
+  {
+   "id": "multi-00513",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-012 命中加 40 分[2]；R-003 命中加 30 分[5]。合计 70 分[1]。按分级标准，60-79 分判定为人工审核（REVIEW）[1]。"
+  },
+  {
+   "id": "multi-00514",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流无签收凭证的，正常退款[1]。另外，30 天内第 3 次以未收到货申请，达到 R-008 的 ≥3 次阈值，命中加 60 分[4]；政策要求多次以未收到货为由申请退款的转人工审核，审核期间暂停自动退款[1]。"
+  },
+  {
+   "id": "multi-00515",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[2]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[3]。相似判例 C-1096：某高校同一校园网出口 IP 24 小时内出现 12 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[4]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00516",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "相似判例 C-1187 的审核结论为正常用户，处置为放行[2]。相关政策《图谱关联证据的使用原则》规定：关联图谱以账号、设备、IP、手机号、收货地址为节点，共用关系为边[4]。处置动作的含义见《处置动作说明》：可选处置动作有四种：拦截订单（block_order），取消本笔订单或优惠；账号拉黑（blacklist_user），账号写入黑名单，后续事件直接拒绝；设备封禁（ban_device），设备指纹写入黑名单，该设备上所有账号的后续事件直接拒绝；放行（release），确认为正常用户，解除挂起[3]。建议核实与判例情况一致后，参照判例处置。"
+  },
+  {
+   "id": "multi-00517",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[3]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[2]。相似判例 C-1082：某高校同一校园网出口 IP 24 小时内出现 21 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[1]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00518",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[2]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[1]。相似判例 C-1124：某高校同一校园网出口 IP 24 小时内出现 19 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[3]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00519",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    3,
+    4,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[3]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[4]。相似判例 C-1159：某高校同一校园网出口 IP 24 小时内出现 18 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[5]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00520",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    4,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-005 命中加 35 分[1]；R-004 命中加 45 分[4]。合计 80 分[5]。按分级标准，80-100 分判定为拒绝（REJECT）[5]。"
+  },
+  {
+   "id": "multi-00521",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-001 命中加 40 分[3]；R-002 命中加 50 分[1]；R-003 命中加 30 分[2]。合计 120 分，总分截断在 0-100 之间，按 100 分计[5]。按分级标准，80-100 分判定为拒绝（REJECT）[5]。"
+  },
+  {
+   "id": "multi-00522",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "相似判例 C-1052 的审核结论为确认欺诈，处置为拦截订单、账号拉黑[3]。相关政策《图谱关联证据的使用原则》规定：关联图谱以账号、设备、IP、手机号、收货地址为节点，共用关系为边[2]。处置动作的含义见《处置动作说明》：可选处置动作有四种：拦截订单（block_order），取消本笔订单或优惠；账号拉黑（blacklist_user），账号写入黑名单，后续事件直接拒绝；设备封禁（ban_device），设备指纹写入黑名单，该设备上所有账号的后续事件直接拒绝；放行（release），确认为正常用户，解除挂起[1]。建议核实与判例情况一致后，参照判例处置。"
+  },
+  {
+   "id": "multi-00523",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "相似判例 C-1188 的审核结论为正常用户，处置为放行[4]。相关政策《图谱关联证据的使用原则》规定：关联图谱以账号、设备、IP、手机号、收货地址为节点，共用关系为边[3]。处置动作的含义见《处置动作说明》：可选处置动作有四种：拦截订单（block_order），取消本笔订单或优惠；账号拉黑（blacklist_user），账号写入黑名单，后续事件直接拒绝；设备封禁（ban_device），设备指纹写入黑名单，该设备上所有账号的后续事件直接拒绝；放行（release），确认为正常用户，解除挂起[2]。建议核实与判例情况一致后，参照判例处置。"
+  },
+  {
+   "id": "multi-00524",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    3,
+    4,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-012 命中加 40 分[3]；R-003 命中加 30 分[4]。合计 70 分[5]。按分级标准，60-79 分判定为人工审核（REVIEW）[5]。"
+  },
+  {
+   "id": "multi-00525",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流无签收凭证的，正常退款[3]。30 天内第 2 次申请，未达到 R-008 要求的 ≥3 次，不触发该规则[2]。"
+  },
+  {
+   "id": "multi-00526",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流无签收凭证的，正常退款[1]。30 天内第 2 次申请，未达到 R-008 要求的 ≥3 次，不触发该规则[2]。"
+  },
+  {
+   "id": "multi-00527",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流无签收凭证的，正常退款[4]。另外，30 天内第 6 次以未收到货申请，达到 R-008 的 ≥3 次阈值，命中加 60 分[2]；政策要求多次以未收到货为由申请退款的转人工审核，审核期间暂停自动退款[4]。"
+  },
+  {
+   "id": "multi-00528",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-005 命中加 35 分[1]；R-003 命中加 30 分[5]。合计 65 分[2]。按分级标准，60-79 分判定为人工审核（REVIEW）[2]。"
+  },
+  {
+   "id": "multi-00529",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-005 命中加 35 分[5]；R-007 命中加 30 分[2]；灰名单命中额外加 20 分[3]。合计 85 分[3]。按分级标准，80-100 分判定为拒绝（REJECT）[3]。"
+  },
+  {
+   "id": "multi-00530",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[1]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[2]。相似判例 C-1012：某高校同一校园网出口 IP 24 小时内出现 37 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[3]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00531",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    3,
+    4,
+    5
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "R-003 命中加 30 分[3]；R-012 命中加 40 分[4]；灰名单命中额外加 20 分[5]。合计 90 分[5]。按分级标准，80-100 分判定为拒绝（REJECT）[5]。"
+  },
+  {
+   "id": "multi-00532",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2,
+    4
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "不能直接定性。R-007 只看同一 IP 24 小时内 ≥5 个账号，命中加 30 分[4]；图谱使用原则指出公共 IP 会造成大量无关联系，单凭 IP 关联不能确认为团伙欺诈[2]。相似判例 C-1194：某高校同一校园网出口 IP 24 小时内出现 20 个账号支付，核查设备与收货信息均不重合，订单为正常小额消费，审核结论为正常用户，处置为放行[1]。建议核查设备与收货信息后再判断。"
+  },
+  {
+   "id": "multi-00533",
+   "type": "multi",
+   "refused": false,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "cite_ok": true,
+   "cite_recall": 1.0,
+   "answer": "按退款赔付政策，物流显示已签收且有签收凭证的，不予退款并引导用户联系快递[1]。30 天内第 2 次申请，未达到 R-008 要求的 ≥3 次，不触发该规则[3]。"
+  },
+  {
+   "id": "refuse-00801",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3
+   ],
+   "answer": "根据现有资料无法确定。[2] 写的是 ≥5，[3] 写的是 ≥8，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00802",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "answer": "根据现有资料无法确定。[3] 写的是 ≥3，[1] 写的是 ≥2，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00803",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "answer": "根据现有资料无法确定。[2] 写的是 ≥5，[1] 写的是 ≥7，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00804",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于账号实名信息的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00805",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于会员等级减分规则的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00806",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "answer": "根据现有资料无法确定。[3] 写的是 ≥5，[1] 写的是 ≥6，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00807",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "answer": "根据现有资料无法确定。[2] 写的是 ≥5，[1] 写的是 ≥8，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00808",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "answer": "根据现有资料无法确定。[1] 只说明了 R-004 的触发条件和分值，没有上线时间的信息。"
+  },
+  {
+   "id": "refuse-00809",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "answer": "根据现有资料无法确定。[1] 写的是 ≥3，[2] 写的是 ≥4，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00810",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于系统性能指标的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00811",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于系统性能指标的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00812",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于商户结算周期的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00813",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2
+   ],
+   "answer": "根据现有资料无法确定。[2] 只说明了 R-008 的触发条件和分值，没有命中次数统计的信息。"
+  },
+  {
+   "id": "refuse-00814",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "answer": "根据现有资料无法确定。[1] 只说明了 R-011 的触发条件和分值，没有误伤率数据的信息。"
+  },
+  {
+   "id": "refuse-00815",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于会员等级减分规则的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00816",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3
+   ],
+   "answer": "根据现有资料无法确定。[3] 写的是 ≥5，[2] 写的是 ≥8，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00817",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2
+   ],
+   "answer": "根据现有资料无法确定。[2] 只说明了 R-007 的触发条件和分值，没有命中次数统计的信息。"
+  },
+  {
+   "id": "refuse-00818",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于虚拟商品风控阈值的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00819",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "answer": "根据现有资料无法确定。[1] 写的是 ≥5，[2] 写的是 ≥4，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00820",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于盗刷报案流程的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00821",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "answer": "根据现有资料无法确定。[1] 只说明了 R-003 的触发条件和分值，没有负责人的信息。"
+  },
+  {
+   "id": "refuse-00822",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于机器学习模型选型的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00823",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "answer": "根据现有资料无法确定。[1] 只说明了 R-002 的触发条件和分值，没有负责人的信息。"
+  },
+  {
+   "id": "refuse-00824",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "answer": "根据现有资料无法确定。[1] 只说明了 R-007 的触发条件和分值，没有上线时间的信息。"
+  },
+  {
+   "id": "refuse-00825",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于商户结算周期的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00826",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于规则 R-013的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00827",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    2,
+    3
+   ],
+   "answer": "根据现有资料无法确定。[3] 写的是 ≥3，[2] 写的是 ≥5，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00828",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于商户结算周期的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00829",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [],
+   "answer": "根据现有资料无法确定。参考资料中没有关于直播间风控策略的内容，建议补充相关资料或人工确认。"
+  },
+  {
+   "id": "refuse-00830",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "answer": "根据现有资料无法确定。[2] 写的是 ≥5，[1] 写的是 ≥8，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00831",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1
+   ],
+   "answer": "根据现有资料无法确定。[1] 只说明了 R-003 的触发条件和分值，没有命中次数统计的信息。"
+  },
+  {
+   "id": "refuse-00832",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    3
+   ],
+   "answer": "根据现有资料无法确定。[1] 写的是 ≥3，[3] 写的是 ≥5，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  },
+  {
+   "id": "refuse-00833",
+   "type": "refuse",
+   "refused": true,
+   "fabricated": false,
+   "unsupported": [],
+   "cites": [
+    1,
+    2
+   ],
+   "answer": "根据现有资料无法确定。[1] 写的是 ≥3，[2] 写的是 ≥6，两份资料相互冲突，请以规则管理页当前生效的版本为准并人工确认。"
+  }
+ ]
+}

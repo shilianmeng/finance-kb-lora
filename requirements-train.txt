@@ -1,0 +1,6 @@
+torch>=2.1
+transformers>=4.44,<5
+peft>=0.12
+accelerate>=0.33
+modelscope>=1.17
+sentencepiece
